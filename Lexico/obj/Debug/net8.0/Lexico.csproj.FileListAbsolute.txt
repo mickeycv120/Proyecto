@@ -1,0 +1,5 @@
+D:\C#\Proyecto\Lexico\obj\Debug\net8.0\Lexico.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Proyecto\Lexico\obj\Debug\net8.0\Lexico.AssemblyInfoInputs.cache
+D:\C#\Proyecto\Lexico\obj\Debug\net8.0\Lexico.AssemblyInfo.cs
+D:\C#\Proyecto\Lexico\obj\Debug\net8.0\Lexico.csproj.CoreCompileInputs.cache
+D:\C#\Proyecto\Lexico\obj\Debug\net8.0\Lexico.sourcelink.json
