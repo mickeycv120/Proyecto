@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Lexico
 {
-    public class Main
+    public class Program
     {
-        public static void main(string[] args){
+        public static void Main(string[] args){
             using (Lexico T = new Lexico())
             {
                 T.SetContenido("HOLA");
