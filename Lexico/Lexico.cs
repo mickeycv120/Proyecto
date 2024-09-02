@@ -26,8 +26,7 @@ namespace Lexico
             asm = new StreamWriter("prueba.asm");
             log.AutoFlush = true;
             asm.AutoFlush = true;
-
-            if (File.Exists("prueba2.cpp"))
+            if (File.Exists("prueba.cpp"))
             {
                 archivo = new StreamReader("prueba.cpp");
             }
@@ -37,7 +36,7 @@ namespace Lexico
             }
         }
 
-        public Lexico(string nombre)
+        /* public Lexico(string nombre)
         {
             /* 
             Si nombre es = suma.cpp
@@ -45,9 +44,9 @@ namespace Lexico
             ASM = suma.asm
             y validar la extensión del archivo
             checar como validar y cambiar la extensión del archivo
-             */
+           
 
-        }
+        } */
 
         public void Dispose()
         {
@@ -73,23 +72,58 @@ namespace Lexico
             string buffer = "";
             while (char.IsWhiteSpace(c = (char)archivo.Read()))
             {
-
             }
+            buffer += c;
             if (char.IsLetter(c))
             {
-                SetClasificacion(Tipos.Identificador);
+                setClasificacion(Tipos.Identificador);
+                while (char.IsLetterOrDigit(c = (char)archivo.Peek()))
+                {
+                    buffer += c;
+                    archivo.Read();
+                }
             }
             else if (char.IsDigit(c))
             {
-                SetClasificacion(Tipos.Numero);
+                setClasificacion(Tipos.Numero);
+                while (char.IsDigit(c = (char)archivo.Peek()))
+                {
+                    buffer += c;
+                    archivo.Read();
+                }
+            }
+            else if (c == ';')
+            {
+                setClasificacion(Tipos.FinSentencia);
+            }
+            else if (c == '{')
+            {
+                setClasificacion(Tipos.InicioBloque);
+            }
+            else if (c == '}')
+            {
+                setClasificacion(Tipos.FinBloque);
+            }
+            else if (c == '?')
+            {
+                setClasificacion(Tipos.OperadorTernario);
+            }
+            else if (c == '+' || c == '-')
+            {
+                setClasificacion(Tipos.OperadorTermino);
             }
             else
             {
-                SetClasificacion(Tipos.Caracter);
+                setClasificacion(Tipos.Caracter);
             }
-            SetContenido(buffer);
-            log.WriteLine(GetContenido() + "=" + GetClasificacion());
+            setContenido(buffer);
+            log.WriteLine(getContenido() + "=" + getClasificacion());
 
+        }
+        public bool finArchivo()
+        {
+            return archivo.EndOfStream;
         }
     }
 }
+

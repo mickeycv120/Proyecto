@@ -1,1 +1,7 @@
-Error:El archivo prueba.cpp no existe
+a=Identificador
+12=Numero
++=OperadorTermino
+;=FinSentencia
+{=InicioBloque
+}=FinBloque
+?=OperadorTernario

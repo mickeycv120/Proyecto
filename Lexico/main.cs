@@ -13,13 +13,18 @@ namespace Lexico
             {
                 using (Lexico T = new())
                 {
-                    T.SetContenido("HOLA");
+                    while (!T.finArchivo())
+                    {
+                        T.nextToken();
+                    }
+                    /* T.SetContenido("HOLA");
                     T.SetClasificacion(Token.Tipos.Identificador);
                     System.Console.WriteLine(T.GetContenido() + "=" + T.GetClasificacion());
                     T.SetContenido("123");
                     T.SetClasificacion(Token.Tipos.Numero);
 
-                    System.Console.WriteLine(T.GetContenido() + "=" + T.GetClasificacion());
+                    System.Console.WriteLine(T.GetContenido() + "=" + T.GetClasificacion()); */
+
                 }
             }
             catch (Exception e)
@@ -27,7 +32,6 @@ namespace Lexico
                 Console.Error.WriteLine("Error: " + e.Message);
 
             }
-
 
         }
     }
