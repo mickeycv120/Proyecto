@@ -112,6 +112,10 @@ namespace Lexico
             {
                 setClasificacion(Tipos.OperadorTermino);
             }
+            else if (c == '/' || c == '*' || c == '%')
+            {
+                setClasificacion(Tipos.OperadorFactor);
+            }
             else
             {
                 setClasificacion(Tipos.Caracter);
