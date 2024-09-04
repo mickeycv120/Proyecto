@@ -15,6 +15,10 @@ namespace Lexico
 
         /* Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar 
            Requerimiento 2: Tener un contador de líneas
+           Requerimiento 3: Agregar un OperadorRelacional:
+                            ==, >, >=, <, <=, <>, !=     
+           Requerimiento 4: Agregar un OperadorLogico
+                            &&, ||, !
            
            */
 
@@ -108,20 +112,59 @@ namespace Lexico
             {
                 setClasificacion(Tipos.OperadorTernario);
             }
-            else if (c == '+' || c == '-')
+            else if (c == '=')
+            {
+                setClasificacion(Tipos.Asignacion);
+            }
+            else if (c == '+')
             {
                 setClasificacion(Tipos.OperadorTermino);
+                if ((c = (char)archivo.Peek()) == '+' || c == '=')
+                {
+                    setClasificacion(Tipos.IncrementoTermino);
+                    buffer += c;
+                    archivo.Read();
+
+                }
             }
+            else if (c == '-')
+            {
+                setClasificacion(Tipos.OperadorTermino);
+                if ((c = (char)archivo.Peek()) == '-' || (c == '='))
+                {
+                    setClasificacion(Tipos.IncrementoTermino);
+                    buffer += c;
+                    archivo.Read();
+                }
+                else if ((c = (char)archivo.Peek()) == '>')
+                {
+                    buffer += c;
+                    archivo.Read();
+                }
+            }
+
             else if (c == '/' || c == '*' || c == '%')
             {
                 setClasificacion(Tipos.OperadorFactor);
+                if ((c = (char)archivo.Peek()) == '=')
+                {
+                    setClasificacion(Tipos.IncrementoFactor);
+                    buffer += c;
+                    archivo.Read();
+                }
             }
             else
             {
                 setClasificacion(Tipos.Caracter);
             }
+
+            if (!finArchivo())
+            {
+                setContenido(buffer);
+
+            }
             setContenido(buffer);
-            log.WriteLine(getContenido() + "=" + getClasificacion());
+            log.WriteLine(getContenido() + " = " + getClasificacion());
 
         }
         public bool finArchivo()
