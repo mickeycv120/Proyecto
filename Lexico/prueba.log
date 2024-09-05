@@ -1,10 +1,25 @@
-a=Identificador
-12=Numero
-+=OperadorTermino
-;=FinSentencia
-{=InicioBloque
-}=FinBloque
-?=OperadorTernario
-/=OperadorFactor
-*=OperadorFactor
-%=OperadorFactor
+a = Identificador
+12 = Numero
++ = OperadorTermino
+; = FinSentencia
+{ = InicioBloque
+} = FinBloque
+? = OperadorTernario
+/ = OperadorFactor
+* = OperadorFactor
+% = OperadorFactor
+{ = InicioBloque
+* = OperadorFactor
+/ = OperadorFactor
+% = OperadorFactor
+++ = IncrementoTermino
++ = OperadorTermino
+-- = IncrementoTermino
+- = OperadorTermino
+++ = IncrementoTermino
++= = IncrementoTermino
+-- = IncrementoTermino
+-= = IncrementoTermino
+} = FinBloque
+= = Asignacion
+== = OperadorRelacional

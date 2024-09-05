@@ -1,3 +1,15 @@
+/* 
+    TODO: Requerimientos para el proyecto
+
+   * Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar 
+   * Requerimiento 2: Tener un contador de líneas
+   * Requerimiento 3: Agregar un OperadorRelacional:
+                    ==, >, >=, <, <=, <>, !=     
+   * Requerimiento 4: Agregar un OperadorLogico
+                    &&, ||, !
+
+   */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +25,6 @@ namespace Lexico
         StreamWriter asm;
         int linea;
 
-        /* Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar 
-           Requerimiento 2: Tener un contador de líneas
-           Requerimiento 3: Agregar un OperadorRelacional:
-                            ==, >, >=, <, <=, <>, !=     
-           Requerimiento 4: Agregar un OperadorLogico
-                            &&, ||, !
-           
-           */
 
 
         public Lexico()
@@ -115,6 +119,13 @@ namespace Lexico
             else if (c == '=')
             {
                 setClasificacion(Tipos.Asignacion);
+                c = (char)archivo.Peek();
+                setClasificacion(c == '=' ? Tipos.OperadorRelacional : Tipos.Asignacion);
+                if (c == '=')
+                {
+                    buffer += c;
+                    archivo.Read();
+                }
             }
             else if (c == '+')
             {
@@ -152,6 +163,10 @@ namespace Lexico
                     buffer += c;
                     archivo.Read();
                 }
+            }
+            else if (c == '>')  //Operador lógico 
+            {
+
             }
             else
             {
