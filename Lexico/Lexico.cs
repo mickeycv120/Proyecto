@@ -100,7 +100,7 @@ namespace Lexico
                     archivo.Read();
                 }
             }
-            else if (c == ';')
+            /* else if (c == ';')
             {
                 setClasificacion(Tipos.FinSentencia);
             }
@@ -164,13 +164,87 @@ namespace Lexico
                     archivo.Read();
                 }
             }
-            else if (c == '>')  //Operador lógico 
-            {
-
-            }
-            else
+            else if (c == '$')  //Operador lógico 
             {
                 setClasificacion(Tipos.Caracter);
+                while (char.IsDigit(c = (char)archivo.Peek()))
+                {
+                    setClasificacion(Tipos.Moneda);
+                    buffer += c;
+                    archivo.Read();
+                }
+            } */
+            else
+            {
+                switch (c)
+                {
+                    case ';':
+                        setClasificacion(Tipos.FinSentencia);
+                        break;
+                    case '{':
+                        setClasificacion(Tipos.InicioBloque);
+                        break;
+                    case '}':
+                        setClasificacion(Tipos.FinBloque);
+                        break;
+                    case '?':
+                        setClasificacion(Tipos.OperadorTernario);
+                        break;
+                    case '=':
+                        setClasificacion(Tipos.Asignacion);
+                        c = (char)archivo.Peek();
+                        setClasificacion(c == '=' ? Tipos.OperadorRelacional : Tipos.Asignacion);
+                        if (c == '=')
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '+':
+                        setClasificacion(Tipos.OperadorTermino);
+                        if ((c = (char)archivo.Peek()) == '+' || c == '=')
+                        {
+                            setClasificacion(Tipos.IncrementoTermino);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '-':
+                        setClasificacion(Tipos.OperadorTermino);
+                        if ((c = (char)archivo.Peek()) == '-' || c == '=')
+                        {
+                            setClasificacion(Tipos.IncrementoTermino);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        else if ((c = (char)archivo.Peek()) == '>')
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '/' or '*' or '%':
+                        setClasificacion(Tipos.OperadorFactor);
+                        if ((c = (char)archivo.Peek()) == '=')
+                        {
+                            setClasificacion(Tipos.IncrementoFactor);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '$':  //Operador lógico 
+                        setClasificacion(Tipos.Caracter);
+                        while (char.IsDigit(c = (char)archivo.Peek()))
+                        {
+                            setClasificacion(Tipos.Moneda);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    default:
+                        setClasificacion(Tipos.Caracter);
+                        break;
+                }
             }
 
             if (!finArchivo())

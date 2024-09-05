@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lexico", "Lexico\Lexico.csproj", "{F19FC738-6B19-4B7D-8703-07BBBBC5C7C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lexico", "Lexico\Lexico.csproj", "{192092B2-45DF-4A79-9564-27E00855E5EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F19FC738-6B19-4B7D-8703-07BBBBC5C7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F19FC738-6B19-4B7D-8703-07BBBBC5C7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F19FC738-6B19-4B7D-8703-07BBBBC5C7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F19FC738-6B19-4B7D-8703-07BBBBC5C7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192092B2-45DF-4A79-9564-27E00855E5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192092B2-45DF-4A79-9564-27E00855E5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192092B2-45DF-4A79-9564-27E00855E5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192092B2-45DF-4A79-9564-27E00855E5EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-a = Identificador
+aa = Identificador
 12 = Numero
 + = OperadorTermino
 ; = FinSentencia
@@ -23,3 +23,8 @@ a = Identificador
 } = FinBloque
 = = Asignacion
 == = OperadorRelacional
+$ = Caracter
+$ = Caracter
+$ = Caracter
+$1 = Moneda
+$1234 = Moneda
