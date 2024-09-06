@@ -1,14 +1,26 @@
 /* 
-    TODO: Requerimientos para el proyecto
+//SECTION - Requerimientos para el proyecto
+    * TODO Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar 
+    * TODO Requerimiento 2: Tener un contador de líneas
+    * TODO Requerimiento 3: Agregar un OperadorRelacional: ==, >, >=, <, <=, <>, !=     
+    * TODO Requerimiento 4: Agregar un OperadorLogico &&, ||, !
+//!SECTION
 
-   * Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar 
-   * Requerimiento 2: Tener un contador de líneas
-   * Requerimiento 3: Agregar un OperadorRelacional:
-                    ==, >, >=, <, <=, <>, !=     
-   * Requerimiento 4: Agregar un OperadorLogico
-                    &&, ||, !
+//SECTION - Tokens
 
-   */
+* Z = identificador
+* + = Caracter
+* 123 = Numero
+* $1 = Moneda
+* ; = FinSentencia
+* { = InicioBloque
+* } = FinBloque
+* ? = OperadorTernario
+* = = Asignacion
+* == = OperadorRelacional
+* ++ = IncrementoTermino
+//!SECTION
+ */
 
 using System;
 using System.Collections.Generic;
@@ -20,12 +32,12 @@ namespace Lexico
 {
     public class Lexico : Token, IDisposable
     {
-        StreamReader archivo;
-        StreamWriter log;
-        StreamWriter asm;
+        //@params
+        StreamReader archivo; //* archivo - el archivo que vamos a leer
+        StreamWriter log; //* log - el archivo domde vamos a escribir lo que identifiquemos
+        StreamWriter asm; //* asm - el archivo donde vamos a escribir el código ensamblador
         int linea;
-
-
+        //!@params
 
         public Lexico()
         {
@@ -44,17 +56,49 @@ namespace Lexico
             }
         }
 
-        /* public Lexico(string nombre)
+        public Lexico(string nombre) : this()
         {
-            /* 
-            Si nombre es = suma.cpp
+            /* Si nombre es = suma.cpp
             LOG = suma.log
             ASM = suma.asm
             y validar la extensión del archivo
-            checar como validar y cambiar la extensión del archivo
-           
+            checar como validar y cambiar la extensión del archivo */
 
-        } */
+
+            string extension = Path.GetExtension(nombre);
+            if (extension != ".cpp" && extension != ".asm" && extension != ".log")
+            {
+                dynamic a;
+                System.Console.WriteLine("A qué exgensión te gustaria cambiar? \n1).cpp\n2.log\n3.asm");
+                int opcion;
+                int.TryParse(Console.ReadLine(), out opcion);
+
+                switch (opcion)
+                {
+                    case 1:
+                        extension = Path.ChangeExtension(nombre, ".cpp");
+                        break;
+                    case 2:
+                        extension = Path.ChangeExtension(nombre, ".log");
+                        break;
+                    case 3:
+                        extension = Path.ChangeExtension(nombre, ".ams");
+                        break;
+                    default:
+                        a = ".cpp";
+                        break;
+                }
+
+                File.Move(nombre, extension);
+                //extension = Path.ChangeExtension(".cpp", extension);
+                System.Console.WriteLine($"Se ha cambiado la extensión del archivo a {extension}");
+            }
+            else
+            {
+                System.Console.WriteLine($"El archivo tiene la extensión {Path.GetExtension(nombre)}");
+            }
+
+        }
 
         public void Dispose()
         {
@@ -65,23 +109,13 @@ namespace Lexico
 
         public void nextToken()
         {
-            //123+Z
-            /* Lee  
-            
-            archivo.Read();
-            archivo.Peek();
-
-            Z = identificador
-            + = Caracter
-            123 = Numero
-
-            */
-            char c; //Depositar las lecturas casteadas
+            char c; // * - es el archivo pero carácter por carácter
             string buffer = "";
             while (char.IsWhiteSpace(c = (char)archivo.Read()))
             {
             }
             buffer += c;
+
             if (char.IsLetter(c))
             {
                 setClasificacion(Tipos.Identificador);
@@ -253,7 +287,9 @@ namespace Lexico
 
             }
             setContenido(buffer);
-            log.WriteLine(getContenido() + " = " + getClasificacion());
+
+            /* log.WriteLine(getContenido() + " = " + getClasificacion()); */
+            log.WriteLine($"{getContenido()} = {getClasificacion()}");
 
         }
         public bool finArchivo()
