@@ -1,30 +1,48 @@
-aa = Identificador
-12 = Numero
-+ = OperadorTermino
-; = FinSentencia
-{ = InicioBloque
-} = FinBloque
-? = OperadorTernario
-/ = OperadorFactor
-* = OperadorFactor
-% = OperadorFactor
-{ = InicioBloque
-* = OperadorFactor
-/ = OperadorFactor
-% = OperadorFactor
-++ = IncrementoTermino
-+ = OperadorTermino
--- = IncrementoTermino
-- = OperadorTermino
-++ = IncrementoTermino
-+= = IncrementoTermino
--- = IncrementoTermino
--= = IncrementoTermino
-} = FinBloque
-= = Asignacion
-== = OperadorRelacional
-$ = Caracter
-$ = Caracter
-$ = Caracter
-$1 = Moneda
-$1234 = Moneda
+1 aa = Identificador
+2 12 = Numero
+3 + = OperadorTermino
+4 ; = FinSentencia
+5 { = InicioBloque
+6 } = FinBloque
+7 ? = OperadorTernario
+8 / = OperadorFactor
+9 * = OperadorFactor
+10 % = OperadorFactor
+11 { = InicioBloque
+12 * = OperadorFactor
+13 / = OperadorFactor
+14 % = OperadorFactor
+15 ++ = IncrementoTermino
+16 + = OperadorTermino
+17 -- = IncrementoTermino
+18 - = OperadorTermino
+19 ++ = IncrementoTermino
+20 += = IncrementoTermino
+21 -- = IncrementoTermino
+22 -= = IncrementoTermino
+23 } = FinBloque
+24 = = Asignacion
+25 == = OperadorRelacional
+26 $ = Caracter
+27 $ = Caracter
+28 $ = Caracter
+29 $1 = Moneda
+30 $1234 = Moneda
+31 & = Caracter
+32 && = OperadorLogico
+33 & = Caracter
+34 || = OperadorLogico
+35 | = Caracter
+36 | = Caracter
+37 && = OperadorLogico
+38 & = Caracter
+39 < = OperadorRelacional
+40 <> = OperadorRelacional
+41 <> = OperadorRelacional
+42 > = OperadorRelacional
+43 > = OperadorRelacional
+44 >= = OperadorRelacional
+45 <= = OperadorRelacional
+46 <> = OperadorRelacional
+47 ! = OperadorLogico
+48 != = OperadorRelacional

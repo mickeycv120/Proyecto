@@ -1,6 +1,6 @@
 /* 
 //SECTION - Requerimientos para el proyecto
-    * TODO Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar 
+    * TODO Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar, si no existe el archivo crear un archivo
     * TODO Requerimiento 2: Tener un contador de líneas
     * TODO Requerimiento 3: Agregar un OperadorRelacional: ==, >, >=, <, <=, <>, !=     
     * TODO Requerimiento 4: Agregar un OperadorLogico &&, ||, !
@@ -68,34 +68,9 @@ namespace Lexico
             string extension = Path.GetExtension(nombre);
             if (extension != ".cpp" && extension != ".asm" && extension != ".log")
             {
-                dynamic a;
-                System.Console.WriteLine("A qué exgensión te gustaria cambiar? \n1).cpp\n2.log\n3.asm");
-                int opcion;
-                int.TryParse(Console.ReadLine(), out opcion);
-
-                switch (opcion)
-                {
-                    case 1:
-                        extension = Path.ChangeExtension(nombre, ".cpp");
-                        break;
-                    case 2:
-                        extension = Path.ChangeExtension(nombre, ".log");
-                        break;
-                    case 3:
-                        extension = Path.ChangeExtension(nombre, ".ams");
-                        break;
-                    default:
-                        a = ".cpp";
-                        break;
-                }
-
-                File.Move(nombre, extension);
-                //extension = Path.ChangeExtension(".cpp", extension);
-                System.Console.WriteLine($"Se ha cambiado la extensión del archivo a {extension}");
-            }
-            else
-            {
-                System.Console.WriteLine($"El archivo tiene la extensión {Path.GetExtension(nombre)}");
+                System.Console.WriteLine($"El archivo {nombre} de extensión {extension} no existe");
+                log.WriteLine($"El archivo {nombre} de extensión {extension} no existe");
+                Environment.Exit(1);
             }
 
         }
@@ -266,11 +241,56 @@ namespace Lexico
                             archivo.Read();
                         }
                         break;
-                    case '$':  //Operador lógico 
+                    case '$':
                         setClasificacion(Tipos.Caracter);
                         while (char.IsDigit(c = (char)archivo.Peek()))
                         {
                             setClasificacion(Tipos.Moneda);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '>': //Operador relacional
+                        setClasificacion(Tipos.OperadorRelacional);
+                        if ((c = (char)archivo.Peek()) == '=')
+                        {
+                            setClasificacion(Tipos.OperadorRelacional);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '<': //Operador relacional
+                        setClasificacion(Tipos.OperadorRelacional);
+                        if ((c = (char)archivo.Peek()) == '=' || c == '>')
+                        {
+                            setClasificacion(Tipos.OperadorRelacional);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '!': //Operador lógico/relacional
+                        setClasificacion(Tipos.OperadorLogico);
+                        if ((c = (char)archivo.Peek()) == '=')
+                        {
+                            setClasificacion(Tipos.OperadorRelacional);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '&': //Operador lógico
+                        setClasificacion(Tipos.Caracter);
+                        if ((c = (char)archivo.Peek()) == '&')
+                        {
+                            setClasificacion(Tipos.OperadorLogico);
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        break;
+                    case '|': //Operador lógico
+                        setClasificacion(Tipos.Caracter);
+                        if ((c = (char)archivo.Peek()) == '|')
+                        {
+                            setClasificacion(Tipos.OperadorLogico);
                             buffer += c;
                             archivo.Read();
                         }
@@ -289,8 +309,8 @@ namespace Lexico
             setContenido(buffer);
 
             /* log.WriteLine(getContenido() + " = " + getClasificacion()); */
-            log.WriteLine($"{getContenido()} = {getClasificacion()}");
-
+            log.WriteLine($"{linea} {getContenido()} = {getClasificacion()}");
+            linea++;
         }
         public bool finArchivo()
         {
