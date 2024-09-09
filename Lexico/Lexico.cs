@@ -94,6 +94,7 @@ namespace Lexico
 
         public void Dispose()
         {
+            log.WriteLine($"El archivo tiene {linea} líneas");
             archivo.Close();
             log.Close();
             asm.Close();
@@ -335,4 +336,3 @@ namespace Lexico
         }
     }
 }
-

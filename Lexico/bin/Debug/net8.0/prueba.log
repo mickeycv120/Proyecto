@@ -1,6 +1,0 @@
-a = Identificador
-12 = Numero
-+ = OperadorTermino
-; = FinSentencia
-{ = InicioBloque
-￿ = Caracter
