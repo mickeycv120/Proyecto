@@ -66,12 +66,26 @@ namespace Lexico
 
 
             string extension = Path.GetExtension(nombre);
-            if (extension != ".cpp" && extension != ".asm" && extension != ".log")
+
+            if (File.Exists(nombre))
             {
-                System.Console.WriteLine($"El archivo {nombre} de extensión {extension} no existe");
-                log.WriteLine($"El archivo {nombre} de extensión {extension} no existe");
-                Environment.Exit(1);
+                if (extension != ".cpp" && extension != ".asm" && extension != ".log")
+                {
+                    throw new Error($"El archivo {nombre} es de extensión {extension} y no de extensión \".cpp\"", log);
+                    Environment.Exit(1);
+                }
+                else
+                {
+                    archivo = new StreamReader("prueba.cpp");
+                }
+
             }
+            else
+            {
+                throw new Error("El archivo prueba.cpp no existe", log);
+            }
+
+
 
         }
 

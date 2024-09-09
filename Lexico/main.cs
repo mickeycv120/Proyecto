@@ -11,7 +11,7 @@ namespace Lexico
         {
             try
             {
-                using (Lexico T = new(@"pruebas.cpp"))
+                using (Lexico T = new(@"prueba.cpp"))
                 {
                     while (!T.finArchivo())
                     {
