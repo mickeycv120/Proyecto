@@ -56,14 +56,14 @@ namespace Lexico
             }
         }
 
-        public Lexico(string nombre) : this()
+        public Lexico(string nombre)
         {
             /* Si nombre es = suma.cpp
             LOG = suma.log
             ASM = suma.asm
             y validar la extensión del archivo
             checar como validar y cambiar la extensión del archivo */
-
+            linea = 1;
 
             string extension = Path.GetExtension(nombre);
 
