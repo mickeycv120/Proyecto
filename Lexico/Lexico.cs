@@ -64,6 +64,7 @@ namespace Lexico
             y validar la extensión del archivo
             checar como validar y cambiar la extensión del archivo */
             linea = 1;
+            StreamWriter error = new StreamWriter("Error.log");
 
             string extension = Path.GetExtension(nombre);
 
@@ -81,20 +82,16 @@ namespace Lexico
                     log.AutoFlush = true;
                     asm.AutoFlush = true;
                 }
-
             }
             else
             {
-                throw new Error($"El archivo {nombre} no existe", log);
+                throw new Error($"El archivo {nombre} no existe", error);
             }
-
-
-
         }
 
         public void Dispose()
         {
-            log.WriteLine($"El archivo tiene {linea} líneas");
+            log.WriteLine($"{linea} El archivo tiene {linea - 1} líneas");
             archivo.Close();
             log.Close();
             asm.Close();
@@ -127,80 +124,6 @@ namespace Lexico
                     archivo.Read();
                 }
             }
-            /* else if (c == ';')
-            {
-                setClasificacion(Tipos.FinSentencia);
-            }
-            else if (c == '{')
-            {
-                setClasificacion(Tipos.InicioBloque);
-            }
-            else if (c == '}')
-            {
-                setClasificacion(Tipos.FinBloque);
-            }
-            else if (c == '?')
-            {
-                setClasificacion(Tipos.OperadorTernario);
-            }
-            else if (c == '=')
-            {
-                setClasificacion(Tipos.Asignacion);
-                c = (char)archivo.Peek();
-                setClasificacion(c == '=' ? Tipos.OperadorRelacional : Tipos.Asignacion);
-                if (c == '=')
-                {
-                    buffer += c;
-                    archivo.Read();
-                }
-            }
-            else if (c == '+')
-            {
-                setClasificacion(Tipos.OperadorTermino);
-                if ((c = (char)archivo.Peek()) == '+' || c == '=')
-                {
-                    setClasificacion(Tipos.IncrementoTermino);
-                    buffer += c;
-                    archivo.Read();
-
-                }
-            }
-            else if (c == '-')
-            {
-                setClasificacion(Tipos.OperadorTermino);
-                if ((c = (char)archivo.Peek()) == '-' || (c == '='))
-                {
-                    setClasificacion(Tipos.IncrementoTermino);
-                    buffer += c;
-                    archivo.Read();
-                }
-                else if ((c = (char)archivo.Peek()) == '>')
-                {
-                    buffer += c;
-                    archivo.Read();
-                }
-            }
-
-            else if (c == '/' || c == '*' || c == '%')
-            {
-                setClasificacion(Tipos.OperadorFactor);
-                if ((c = (char)archivo.Peek()) == '=')
-                {
-                    setClasificacion(Tipos.IncrementoFactor);
-                    buffer += c;
-                    archivo.Read();
-                }
-            }
-            else if (c == '$')  //Operador lógico 
-            {
-                setClasificacion(Tipos.Caracter);
-                while (char.IsDigit(c = (char)archivo.Peek()))
-                {
-                    setClasificacion(Tipos.Moneda);
-                    buffer += c;
-                    archivo.Read();
-                }
-            } */
             else
             {
                 switch (c)
@@ -322,14 +245,13 @@ namespace Lexico
             if (!finArchivo())
             {
                 setContenido(buffer);
-
             }
             setContenido(buffer);
 
-            /* log.WriteLine(getContenido() + " = " + getClasificacion()); */
             log.WriteLine($"{linea} {getContenido()} = {getClasificacion()}");
             linea++;
         }
+
         public bool finArchivo()
         {
             return archivo.EndOfStream;
