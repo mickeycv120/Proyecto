@@ -11,6 +11,7 @@ namespace Lexico
         public Error(string message, StreamWriter log) : base(message)
         {
             log.WriteLine("Error:" + message);
+            log.Flush();
         }
 
     }

@@ -36,6 +36,7 @@ namespace Lexico
         StreamReader archivo; //* archivo - el archivo que vamos a leer
         StreamWriter log; //* log - el archivo domde vamos a escribir lo que identifiquemos
         StreamWriter asm; //* asm - el archivo donde vamos a escribir el código ensamblador
+        StreamWriter error; //* error - el archivo donde vamos a escribir los errores
         int linea;
         //!@params
 
@@ -64,7 +65,7 @@ namespace Lexico
             y validar la extensión del archivo
             checar como validar y cambiar la extensión del archivo */
             linea = 1;
-            StreamWriter error = new StreamWriter("Error.log");
+            error = new StreamWriter("Error.log");
 
             string extension = Path.GetExtension(nombre);
 
@@ -72,7 +73,7 @@ namespace Lexico
             {
                 if (extension != ".cpp")
                 {
-                    throw new Error($"El archivo {nombre} es de extensión {extension} y no de extensión \".cpp\"", log);
+                    throw new Error($"El archivo {nombre} es de extensión {extension} y no de extensión \".cpp\"", error);
                 }
                 else
                 {
@@ -95,6 +96,7 @@ namespace Lexico
             archivo.Close();
             log.Close();
             asm.Close();
+            error.Close();
         }
 
         public void nextToken()

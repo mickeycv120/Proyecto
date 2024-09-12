@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8239767e-3e19-4959-9c1b-f6d2e4f7cf09" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Lexico/bin/Debug/net8.0/Lexico.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/bin/Debug/net8.0/Lexico.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/bin/Debug/net8.0/Lexico.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/bin/Debug/net8.0/Lexico.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/bin/Debug/net8.0/Lexico.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/Lexico.sourcelink.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/ref/Lexico.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Debug/net8.0/refint/Lexico.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Lexico.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Lexico.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/Lexico.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico/obj/project.nuget.cache" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mickeycv120"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mickeycv120/Proyecto.git",
+    "accountId": "55e8660c-f0d0-489b-8f8c-eb71478946be"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2lyiyabvsT28XAoQMf8pNCW2kGG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/C#/Proyecto/Lexico",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8239767e-3e19-4959-9c1b-f6d2e4f7cf09" name="Changes" comment="" />
+      <created>1726158972552</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726158972552</updated>
+      <workItem from="1726158974140" duration="114000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
