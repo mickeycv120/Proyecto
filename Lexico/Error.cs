@@ -13,6 +13,11 @@ namespace Lexico
             log.WriteLine("Error:" + message);
             log.Flush();
         }
+        public Error(string message, StreamWriter log, int linea) : base($"{message} en la línea {linea}")
+        {
+            log.WriteLine($"Error: {message}");
+            log.Flush();
+        }
 
     }
 }

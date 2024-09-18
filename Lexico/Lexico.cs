@@ -1,24 +1,32 @@
 /* 
 //SECTION - Requerimientos para el proyecto
-    * TODO Requerimiento 1: sobrecargar el constructor del lexico para que reciba como argumengo el nombre del archivo para compilar, si no existe el archivo crear un archivo
-    * TODO Requerimiento 2: Tener un contador de líneas
-    * TODO Requerimiento 3: Agregar un OperadorRelacional: ==, >, >=, <, <=, <>, !=     
-    * TODO Requerimiento 4: Agregar un OperadorLogico &&, ||, !
+
+    //SECTION - Número y Cadena
+
+        //SECTION - Casos válidos:
+            * 526
+            * 526.18
+            * 526E-813
+            * 526E+813
+            * 526E813
+            * 526.18E-81
+            * 526.18E+81
+            * " "
+            * "Hola mundo"
+        //!SECTION
+
+        //SECTION - Casos inválidos:
+        * 526.18E81  <- +|-|D Error léxico
+        * 526. <- Error lexico
+        * "ITQ <- Error lexico
+        //!SECTION
+
+    //!SECTION
+
 //!SECTION
 
 //SECTION - Tokens
 
-* Z = identificador
-* + = Caracter
-* 123 = Numero
-* $1 = Moneda
-* ; = FinSentencia
-* { = InicioBloque
-* } = FinBloque
-* ? = OperadorTernario
-* = = Asignacion
-* == = OperadorRelacional
-* ++ = IncrementoTermino
 //!SECTION
  */
 
@@ -105,6 +113,10 @@ namespace Lexico
             string buffer = "";
             while (char.IsWhiteSpace(c = (char)archivo.Read()))
             {
+                if (c == '\n')
+                {
+                    linea++;
+                }
             }
             buffer += c;
 
@@ -121,6 +133,16 @@ namespace Lexico
             {
                 setClasificacion(Tipos.Numero);
                 while (char.IsDigit(c = (char)archivo.Peek()))
+                {
+                    buffer += c;
+                    archivo.Read();
+                }
+                if (c == '.')
+                {//Parte fraccional
+                    buffer += c;
+                    archivo.Read();
+                }
+                if (char.ToLower(c) == 'e')//Parte exponencial
                 {
                     buffer += c;
                     archivo.Read();
@@ -184,7 +206,7 @@ namespace Lexico
                             archivo.Read();
                         }
                         break;
-                    case '$':
+                    case '$': //Moneda
                         setClasificacion(Tipos.Caracter);
                         while (char.IsDigit(c = (char)archivo.Peek()))
                         {
@@ -238,6 +260,12 @@ namespace Lexico
                             archivo.Read();
                         }
                         break;
+                    case '"': //Cadena
+                              //...
+                        break;
+                    case '\'': //Caracter
+                               //...
+                        break;
                     default:
                         setClasificacion(Tipos.Caracter);
                         break;
@@ -251,7 +279,7 @@ namespace Lexico
             setContenido(buffer);
 
             log.WriteLine($"{linea} {getContenido()} = {getClasificacion()}");
-            linea++;
+            //linea++;
         }
 
         public bool finArchivo()
