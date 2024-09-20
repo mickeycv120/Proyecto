@@ -154,7 +154,7 @@ namespace Lexico
                     }
                     if (char.IsWhiteSpace(c = (char)archivo.Read()))
                     {
-                        throw new Error($"Se espera un valor después del punto",log, linea);
+                        throw new Error($"Se espera un valor después del punto", log, linea);
                     }
                     else if (char.ToLower(c) == 'e')//Parte exponencial
                     {

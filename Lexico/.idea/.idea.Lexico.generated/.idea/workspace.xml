@@ -7,23 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="Número Exponencial Solucionado">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lexico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lexico.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba.log" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.log" afterDir="false" />
-    </list>
+    <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="Error: Valor sin punto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Lexico.executor": "Debug",
+    ".NET Project.Lexico.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -118,7 +102,7 @@
       <workItem from="1726801723378" duration="87000" />
       <workItem from="1726801836966" duration="768000" />
       <workItem from="1726812371445" duration="892000" />
-      <workItem from="1726821401301" duration="6099000" />
+      <workItem from="1726821401301" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="Número Exponencial Solucionado">
       <option name="closed" value="true" />
@@ -128,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726852069692</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Error: Valor sin punto">
+      <option name="closed" value="true" />
+      <created>1726858449314</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726858449314</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +132,8 @@
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Número Exponencial Solucionado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Número Exponencial Solucionado" />
+    <MESSAGE value="Error: Valor sin punto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error: Valor sin punto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
