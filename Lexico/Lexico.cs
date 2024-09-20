@@ -152,7 +152,11 @@ namespace Lexico
                         buffer += c;
                         archivo.Read();
                     }
-                    if (char.ToLower(c) == 'e')//Parte exponencial
+                    if (char.IsWhiteSpace(c = (char)archivo.Read()))
+                    {
+                        throw new Error($"Se espera un valor después del punto",log, linea);
+                    }
+                    else if (char.ToLower(c) == 'e')//Parte exponencial
                     {
                         buffer += c;
                         archivo.Read();
