@@ -12,6 +12,8 @@
             * 526.18E-81
             * 526.18E+81
             * " "
+            * '''
+            * ' '
             * "Hola mundo"
         //!SECTION
 
@@ -19,6 +21,10 @@
         * 526.18E81  <- +|-|D Error léxico
         * 526. <- Error lexico
         * "ITQ <- Error lexico
+        * ''
+        * ""
+        * "
+        * '
         //!SECTION
 
     //!SECTION
@@ -141,12 +147,17 @@ namespace Lexico
                 {//Parte fraccional
                     buffer += c;
                     archivo.Read();
+                    while (char.IsDigit(c = (char)archivo.Peek()))
+                    {
+                        buffer += c;
+                        archivo.Read();
+                    }
                 }
-                if (char.ToLower(c) == 'e')//Parte exponencial
+                /*if (char.ToLower(c) == 'e')//Parte exponencial
                 {
                     buffer += c;
                     archivo.Read();
-                }
+                }*/
             }
             else
             {
@@ -260,12 +271,19 @@ namespace Lexico
                             archivo.Read();
                         }
                         break;
-                    case '"': //Cadena
+                    /*case '"': //Cadena
+                             //...
+                       setClasificacion(Tipos.Cadena);
+                       while ((c = (char)archivo.Peek()) != '"')
+                       {
+                           setClasificacion(Tipos.Cadena);
+                           buffer += c;
+                           archivo.Read();
+                       }
+                       break;
+                   case '\'': //Caracter
                               //...
-                        break;
-                    case '\'': //Caracter
-                               //...
-                        break;
+                       break;*/
                     default:
                         setClasificacion(Tipos.Caracter);
                         break;

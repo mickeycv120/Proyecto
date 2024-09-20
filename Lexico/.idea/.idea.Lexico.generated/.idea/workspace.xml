@@ -7,7 +7,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="" />
+    <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lexico.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Error.log" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba.log" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +40,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;mickeycv120&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mickeycv120/Proyecto.git&quot;,
+    &quot;accountId&quot;: &quot;2dcdf308-2d66-44ab-a229-626e32537995&quot;
+  }
+}</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -28,26 +64,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Lexico.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Lexico.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/C#/Proyecto/Lexico&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Lexico" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -55,9 +92,9 @@
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/Lexico.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="0" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net8.0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -73,12 +110,19 @@
       <updated>1726159185613</updated>
       <workItem from="1726159188879" duration="188000" />
       <workItem from="1726159406450" duration="1034000" />
+      <workItem from="1726696391701" duration="218000" />
+      <workItem from="1726781977179" duration="152000" />
+      <workItem from="1726782498903" duration="1573000" />
+      <workItem from="1726799800017" duration="191000" />
+      <workItem from="1726801723378" duration="87000" />
+      <workItem from="1726801836966" duration="768000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
@@ -88,17 +132,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Error.cs</url>
-          <line>12</line>
-          <properties documentPath="D:\C#\Proyecto\Lexico\Error.cs" containingFunctionPresentation="Constructor 'Error'">
+          <url>file://$PROJECT_DIR$/main.cs</url>
+          <line>17</line>
+          <properties documentPath="D:\C#\Proyecto\Lexico\main.cs" containingFunctionPresentation="Method 'Main'">
             <startOffsets>
-              <option value="268" />
+              <option value="397" />
             </startOffsets>
             <endOffsets>
-              <option value="302" />
+              <option value="411" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

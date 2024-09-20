@@ -1,16 +1,11 @@
-1 { = InicioBloque
-2 && = OperadorLogico
-3 & = Caracter
-4 || = OperadorLogico
-5 | = Caracter
-6 ! = OperadorLogico
-7 != = OperadorRelacional
-8 == = OperadorRelacional
-9 < = OperadorRelacional
-10 < = OperadorRelacional
-11 <> = OperadorRelacional
-12 > = OperadorRelacional
-13 > = OperadorRelacional
-14 } = FinBloque
-15 hola = Identificador
-16 El archivo tiene 15 líneas
+13 " = Caracter
+13 " = Caracter
+14 " = Caracter
+14 " = Caracter
+15 " = Caracter
+15 Hola = Identificador
+15 mundo = Identificador
+15 " = Caracter
+16 529.89 = Numero
+21 hola = Identificador
+21 El archivo tiene 20 líneas
