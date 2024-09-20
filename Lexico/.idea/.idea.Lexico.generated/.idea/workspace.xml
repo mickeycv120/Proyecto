@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lexico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lexico.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" afterDir="false" />
@@ -23,7 +22,6 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prueba.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prueba.log" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.log" afterDir="false" />
@@ -65,7 +63,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Lexico.executor": "Debug",
+    ".NET Project.Lexico.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -116,7 +114,7 @@
       <workItem from="1726801723378" duration="87000" />
       <workItem from="1726801836966" duration="768000" />
       <workItem from="1726812371445" duration="892000" />
-      <workItem from="1726821401301" duration="1826000" />
+      <workItem from="1726821401301" duration="2892000" />
     </task>
     <servers />
   </component>
@@ -128,25 +126,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Lexico.cs</url>
-          <line>155</line>
-          <properties documentPath="D:\C#\Proyecto\Lexico\Lexico.cs" containingFunctionPresentation="Method 'nextToken'">
-            <startOffsets>
-              <option value="4397" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4424" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

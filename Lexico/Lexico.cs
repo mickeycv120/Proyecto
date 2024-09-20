@@ -106,7 +106,7 @@ namespace Lexico
 
         public void Dispose()
         {
-            log.WriteLine($"{linea} El archivo tiene {linea - 1} líneas");
+            log.WriteLine($"El archivo tiene {linea} líneas");
             archivo.Close();
             log.Close();
             asm.Close();
@@ -166,6 +166,11 @@ namespace Lexico
                                 archivo.Read();
                             }
 
+                        }
+                        while (char.IsDigit(c = (char)archivo.Peek()))
+                        {
+                            buffer += c;
+                            archivo.Read();
                         }
                     }
                 }
@@ -312,7 +317,7 @@ namespace Lexico
             }
             setContenido(buffer);
 
-            log.WriteLine($"{linea} {getContenido()} = {getClasificacion()}");
+            log.WriteLine($"{linea}  {getContenido()} = {getClasificacion()}");
             //linea++;
         }
 
