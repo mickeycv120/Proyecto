@@ -1,11 +1,5 @@
-13 " = Caracter
-13 " = Caracter
-14 " = Caracter
-14 " = Caracter
-15 " = Caracter
-15 Hola = Identificador
-15 mundo = Identificador
-15 " = Caracter
-16 529.89 = Numero
-21 hola = Identificador
-21 El archivo tiene 20 líneas
+13 529.89E = Numero
+13 235 = Numero
+13 + = OperadorTermino
+13 67 = Numero
+13 El archivo tiene 12 líneas

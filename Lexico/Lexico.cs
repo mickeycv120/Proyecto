@@ -152,12 +152,23 @@ namespace Lexico
                         buffer += c;
                         archivo.Read();
                     }
+                    if (char.ToLower(c) == 'e')//Parte exponencial
+                    {
+                        buffer += c;
+                        archivo.Read();
+                        if ((c = (char)archivo.Peek()) == '+' || (c = (char)archivo.Peek()) == '-')
+                        {
+                            buffer += c;
+                            archivo.Read();
+                            while (char.IsDigit(c = (char)archivo.Peek()))
+                            {
+                                buffer += c;
+                                archivo.Read();
+                            }
+
+                        }
+                    }
                 }
-                /*if (char.ToLower(c) == 'e')//Parte exponencial
-                {
-                    buffer += c;
-                    archivo.Read();
-                }*/
             }
             else
             {
@@ -288,6 +299,11 @@ namespace Lexico
                         setClasificacion(Tipos.Caracter);
                         break;
                 }
+            }
+
+            while (char.IsWhiteSpace(c = (char)archivo.Peek()))
+            {
+                archivo.Read();
             }
 
             if (!finArchivo())
