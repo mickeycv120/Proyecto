@@ -1,2 +1,16 @@
-Error: Se espera un valor después del punto
-El archivo tiene 14 líneas
+1  230 = Numero
+2  230.30 = Numero
+6  230.30e30 = Numero
+7  230.30e-30 = Numero
+8  230.30e+30 = Numero
+9  " = Caracter
+9  hola = Identificador
+9  mundo = Identificador
+9  " = Caracter
+10  # = Caracter
+11  # = Caracter
+11  64 = Numero
+12  ' = Caracter
+12  @ = Caracter
+12  ' = Caracter
+El archivo tiene 12 líneas

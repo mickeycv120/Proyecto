@@ -142,24 +142,27 @@ namespace Lexico
                 {
                     buffer += c;
                     archivo.Read();
+                } if(char.ToLower(c) == 'e'){
+                    throw new Error($"Léxico",log,linea);
                 }
                 if (c == '.')
                 {//Parte fraccional
                     buffer += c;
                     archivo.Read();
+                    if (!char.IsDigit(c = (char)archivo.Peek()) && (char.ToLower(c) != 'e'))
+                    {
+                        throw new Error($"Se espera un valor después del punto", log, linea);
+                    }
                     while (char.IsDigit(c = (char)archivo.Peek()))
                     {
                         buffer += c;
                         archivo.Read();
                     }
-                    if (char.IsWhiteSpace(c = (char)archivo.Read()))
-                    {
-                        throw new Error($"Se espera un valor después del punto", log, linea);
-                    }
-                    else if (char.ToLower(c) == 'e')//Parte exponencial
+                    if (char.ToLower(c) == 'e')//Parte exponencial
                     {
                         buffer += c;
                         archivo.Read();
+
                         if ((c = (char)archivo.Peek()) == '+' || (c = (char)archivo.Peek()) == '-')
                         {
                             buffer += c;
@@ -310,17 +313,13 @@ namespace Lexico
                 }
             }
 
-            while (char.IsWhiteSpace(c = (char)archivo.Peek()))
-            {
-                archivo.Read();
-            }
+            
 
             if (!finArchivo())
             {
                 setContenido(buffer);
             }
             setContenido(buffer);
-
             log.WriteLine($"{linea}  {getContenido()} = {getClasificacion()}");
             //linea++;
         }

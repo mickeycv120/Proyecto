@@ -7,7 +7,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="Error: Valor sin punto" />
+    <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lexico.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/Lexico.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba.log" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +64,9 @@
     &quot;accountId&quot;: &quot;2dcdf308-2d66-44ab-a229-626e32537995&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/main.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -61,7 +89,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -102,7 +130,9 @@
       <workItem from="1726801723378" duration="87000" />
       <workItem from="1726801836966" duration="768000" />
       <workItem from="1726812371445" duration="892000" />
-      <workItem from="1726821401301" duration="6404000" />
+      <workItem from="1726821401301" duration="6534000" />
+      <workItem from="1726864460274" duration="1768000" />
+      <workItem from="1726866791075" duration="6406000" />
     </task>
     <task id="LOCAL-00001" summary="Número Exponencial Solucionado">
       <option name="closed" value="true" />
@@ -140,16 +170,29 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Lexico.cs</url>
-          <line>145</line>
+          <line>119</line>
           <properties documentPath="D:\C#\Proyecto\Lexico\Lexico.cs" containingFunctionPresentation="Method 'nextToken'">
             <startOffsets>
-              <option value="4044" />
+              <option value="3265" />
             </startOffsets>
             <endOffsets>
-              <option value="4057" />
+              <option value="3316" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Lexico.cs</url>
+          <line>125</line>
+          <properties documentPath="D:\C#\Proyecto\Lexico\Lexico.cs" containingFunctionPresentation="Method 'nextToken'">
+            <startOffsets>
+              <option value="3439" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3440" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
