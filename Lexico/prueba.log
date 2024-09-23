@@ -9,5 +9,5 @@
 9  "hola mundo" = Cadena
 10  # = Caracter
 11  #64 = Caracter
-12  '@' = Cadena
+Error: Léxico, se esperaba un solo carácter en la línea 12
 El archivo tiene 12 líneas

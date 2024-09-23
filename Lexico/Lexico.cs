@@ -345,7 +345,7 @@ namespace Lexico
                         break;
 
                     case '\'': //Caracter
-                        setClasificacion(Tipos.Cadena);
+                        setClasificacion(Tipos.Caracter);
                         if ((c = (char)archivo.Peek()) == '\'')
                         {
                             throw new Error("Cadena vacía", log, linea);
@@ -363,14 +363,16 @@ namespace Lexico
                             {
                                 throw new Error("Cadena no cerrada antes del final de línea", log, linea);
                             }
-
-                            if (c == '\'')
+                            else if (c == '\'')
                             {
                                 buffer += c;
                                 break;
                             }
+                            else if (char.IsLetter(c = (char)archivo.Peek()))
+                            {
+                                throw new Error("Léxico, se esperaba un solo carácter", log, linea);
+                            }
 
-                            buffer += c;
                         }
                         break;
                     case '#':
