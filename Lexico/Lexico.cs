@@ -142,8 +142,27 @@ namespace Lexico
                 {
                     buffer += c;
                     archivo.Read();
-                } if(char.ToLower(c) == 'e'){
-                    throw new Error($"Léxico",log,linea);
+                } 
+                if(char.ToLower(c) == 'e'){
+                    buffer += c;
+                    archivo.Read();
+                    while (char.IsDigit(c = (char)archivo.Peek()))
+                    {
+                        buffer += c;
+                        archivo.Read();
+                    }
+
+                    if ((c = (char)archivo.Peek()) == '+' || (c = (char)archivo.Peek()) == '-')
+                    {
+                        buffer += c;
+                        archivo.Read();
+                        while (char.IsDigit(c = (char)archivo.Peek()))
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        //throw new Error($"Léxico",log,linea);
+                    }
                 }
                 if (c == '.')
                 {//Parte fraccional
@@ -294,17 +313,15 @@ namespace Lexico
                             archivo.Read();
                         }
                         break;
-                    /*case '"': //Cadena
-                             //...
-                       setClasificacion(Tipos.Cadena);
-                       while ((c = (char)archivo.Peek()) != '"')
-                       {
-                           setClasificacion(Tipos.Cadena);
-                           buffer += c;
-                           archivo.Read();
-                       }
-                       break;
-                   case '\'': //Caracter
+                    case '"': //Cadena
+                        setClasificacion(Tipos.Cadena);
+                            while (char.IsLetterOrDigit(c = (char)archivo.Peek()))
+                            {
+                                buffer += c;
+                                archivo.Read();
+                            } 
+                        break;
+                   /*case '\'': //Caracter
                               //...
                        break;*/
                     default:
