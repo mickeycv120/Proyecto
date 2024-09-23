@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lexico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lexico.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" afterDir="false" />
@@ -71,7 +70,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Lexico.executor": "Debug",
+    ".NET Project.Lexico.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -125,7 +124,7 @@
       <workItem from="1726821401301" duration="6534000" />
       <workItem from="1726864460274" duration="1768000" />
       <workItem from="1726866791075" duration="6406000" />
-      <workItem from="1727061319439" duration="4831000" />
+      <workItem from="1727061319439" duration="5192000" />
     </task>
     <task id="LOCAL-00001" summary="Número Exponencial Solucionado">
       <option name="closed" value="true" />
@@ -186,19 +185,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Lexico.cs</url>
-          <line>320</line>
-          <properties documentPath="D:\C#\Proyecto\Lexico\Lexico.cs" containingFunctionPresentation="Method 'nextToken'">
-            <startOffsets>
-              <option value="11448" />
-            </startOffsets>
-            <endOffsets>
-              <option value="11492" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

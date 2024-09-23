@@ -316,7 +316,7 @@ namespace Lexico
                         break;
                     case '"': // Cadena
                         setClasificacion(Tipos.Cadena);
-                        if ((c=(char)archivo.Peek())=='"')
+                        if ((c = (char)archivo.Peek()) == '"')
                         {
                             throw new Error("Cadena vacía", log, linea);
                         }
@@ -346,7 +346,7 @@ namespace Lexico
 
                     case '\'': //Caracter
                         setClasificacion(Tipos.Cadena);
-                        if ((c=(char)archivo.Peek())=='"')
+                        if ((c = (char)archivo.Peek()) == '\'')
                         {
                             throw new Error("Cadena vacía", log, linea);
                         }

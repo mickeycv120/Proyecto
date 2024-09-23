@@ -7,5 +7,8 @@
 7  230.30e-30 = Numero
 8  230.30e+30 = Numero
 9  "hola mundo" = Cadena
-Error: Cadena vacía en la línea 10
-El archivo tiene 10 líneas
+10  # = Caracter
+11  # = Caracter
+11  64 = Numero
+12  '@' = Cadena
+El archivo tiene 12 líneas
