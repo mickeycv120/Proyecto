@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca46c3d6-6c39-4632-9672-b14fdd44df42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lexico.generated/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Error.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lexico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lexico.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Lexico.exe" afterDir="false" />
@@ -22,9 +21,6 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/Lexico.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/Lexico.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Lexico.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prueba.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prueba.log" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.log" afterDir="false" />
     </list>
@@ -75,7 +71,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Lexico.executor": "Run",
+    ".NET Project.Lexico.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -129,7 +125,7 @@
       <workItem from="1726821401301" duration="6534000" />
       <workItem from="1726864460274" duration="1768000" />
       <workItem from="1726866791075" duration="6406000" />
-      <workItem from="1727061319439" duration="3470000" />
+      <workItem from="1727061319439" duration="4831000" />
     </task>
     <task id="LOCAL-00001" summary="Número Exponencial Solucionado">
       <option name="closed" value="true" />
@@ -177,6 +173,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Lexico.cs</url>
+          <line>317</line>
+          <properties documentPath="D:\C#\Proyecto\Lexico\Lexico.cs" containingFunctionPresentation="Method 'nextToken'">
+            <startOffsets>
+              <option value="11303" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11334" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Lexico.cs</url>
+          <line>320</line>
+          <properties documentPath="D:\C#\Proyecto\Lexico\Lexico.cs" containingFunctionPresentation="Method 'nextToken'">
+            <startOffsets>
+              <option value="11448" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11492" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -314,17 +314,65 @@ namespace Lexico
                             archivo.Read();
                         }
                         break;
-                    case '"': //Cadena
+                    case '"': // Cadena
                         setClasificacion(Tipos.Cadena);
-                        while (char.IsLetterOrDigit(c = (char)archivo.Peek()))
+                        if ((c=(char)archivo.Peek())=='"')
                         {
+                            throw new Error("Cadena vacía", log, linea);
+                        }
+                        while (true)
+                        {
+                            if (finArchivo())
+                            {
+                                throw new Error("Cadena no cerrada antes del fin del archivo", log, linea);
+                            }
+
+                            c = (char)archivo.Read();
+
+                            if (c == '\n')
+                            {
+                                throw new Error("Cadena no cerrada antes del final de línea", log, linea);
+                            }
+
+                            if (c == '"')
+                            {
+                                buffer += c;
+                                break;
+                            }
+
                             buffer += c;
-                            archivo.Read();
                         }
                         break;
-                    /*case '\'': //Caracter
-                               //...
-                        break;*/
+
+                    case '\'': //Caracter
+                        setClasificacion(Tipos.Cadena);
+                        if ((c=(char)archivo.Peek())=='"')
+                        {
+                            throw new Error("Cadena vacía", log, linea);
+                        }
+                        while (true)
+                        {
+                            if (finArchivo())
+                            {
+                                throw new Error("Cadena no cerrada antes del fin del archivo", log, linea);
+                            }
+
+                            c = (char)archivo.Read();
+
+                            if (c == '\n')
+                            {
+                                throw new Error("Cadena no cerrada antes del final de línea", log, linea);
+                            }
+
+                            if (c == '\'')
+                            {
+                                buffer += c;
+                                break;
+                            }
+
+                            buffer += c;
+                        }
+                        break;
                     default:
                         setClasificacion(Tipos.Caracter);
                         break;

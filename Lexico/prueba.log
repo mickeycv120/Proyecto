@@ -1,18 +1,11 @@
 1  230 = Numero
 2  230.30 = Numero
-3  230.e30 = Numero
+3  230e30 = Numero
 4  230e-30 = Numero
 5  230e+30 = Numero
 6  230.30e30 = Numero
 7  230.30e-30 = Numero
 8  230.30e+30 = Numero
-9  "hola = Cadena
-9  mundo = Identificador
-9  " = Cadena
-10  # = Caracter
-11  # = Caracter
-11  64 = Numero
-12  ' = Caracter
-12  @ = Caracter
-12  ' = Caracter
-El archivo tiene 12 líneas
+9  "hola mundo" = Cadena
+Error: Cadena vacía en la línea 10
+El archivo tiene 10 líneas
