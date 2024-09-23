@@ -345,7 +345,7 @@ namespace Lexico
                         break;
 
                     case '\'': //Caracter
-                        setClasificacion(Tipos.Cadena);
+                        setClasificacion(Tipos.Caracter);
                         if ((c = (char)archivo.Peek()) == '\'')
                         {
                             throw new Error("Cadena vacía", log, linea);
@@ -372,6 +372,15 @@ namespace Lexico
 
                             buffer += c;
                         }
+                        break;
+                    case '#':
+                        setClasificacion(Tipos.Caracter);
+                        while (char.IsDigit(c = (char)archivo.Peek()))
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
+
                         break;
                     default:
                         setClasificacion(Tipos.Caracter);

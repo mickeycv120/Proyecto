@@ -8,7 +8,6 @@
 8  230.30e+30 = Numero
 9  "hola mundo" = Cadena
 10  # = Caracter
-11  # = Caracter
-11  64 = Numero
-12  '@' = Cadena
+11  #64 = Caracter
+12  '@' = Caracter
 El archivo tiene 12 líneas
