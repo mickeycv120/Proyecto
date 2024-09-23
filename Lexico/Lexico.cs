@@ -142,8 +142,9 @@ namespace Lexico
                 {
                     buffer += c;
                     archivo.Read();
-                } 
-                if(char.ToLower(c) == 'e'){
+                }
+                if (char.ToLower(c) == 'e')
+                {
                     buffer += c;
                     archivo.Read();
                     while (char.IsDigit(c = (char)archivo.Peek()))
@@ -315,22 +316,22 @@ namespace Lexico
                         break;
                     case '"': //Cadena
                         setClasificacion(Tipos.Cadena);
-                            while (char.IsLetterOrDigit(c = (char)archivo.Peek()))
-                            {
-                                buffer += c;
-                                archivo.Read();
-                            } 
+                        while (char.IsLetterOrDigit(c = (char)archivo.Peek()))
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
                         break;
-                   /*case '\'': //Caracter
-                              //...
-                       break;*/
+                    /*case '\'': //Caracter
+                               //...
+                        break;*/
                     default:
                         setClasificacion(Tipos.Caracter);
                         break;
                 }
             }
 
-            
+
 
             if (!finArchivo())
             {
