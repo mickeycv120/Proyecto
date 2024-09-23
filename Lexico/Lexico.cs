@@ -143,28 +143,6 @@ namespace Lexico
                     buffer += c;
                     archivo.Read();
                 }
-                if (char.ToLower(c) == 'e')
-                {
-                    buffer += c;
-                    archivo.Read();
-                    while (char.IsDigit(c = (char)archivo.Peek()))
-                    {
-                        buffer += c;
-                        archivo.Read();
-                    }
-
-                    if ((c = (char)archivo.Peek()) == '+' || (c = (char)archivo.Peek()) == '-')
-                    {
-                        buffer += c;
-                        archivo.Read();
-                        while (char.IsDigit(c = (char)archivo.Peek()))
-                        {
-                            buffer += c;
-                            archivo.Read();
-                        }
-                        //throw new Error($"Léxico",log,linea);
-                    }
-                }
                 if (c == '.')
                 {//Parte fraccional
                     buffer += c;
@@ -199,6 +177,28 @@ namespace Lexico
                             buffer += c;
                             archivo.Read();
                         }
+                    }
+                }
+                else if (char.ToLower(c) == 'e')
+                {
+                    buffer += c;
+                    archivo.Read();
+                    while (char.IsDigit(c = (char)archivo.Peek()))
+                    {
+                        buffer += c;
+                        archivo.Read();
+                    }
+
+                    if ((c = (char)archivo.Peek()) == '+' || (c = (char)archivo.Peek()) == '-')
+                    {
+                        buffer += c;
+                        archivo.Read();
+                        while (char.IsDigit(c = (char)archivo.Peek()))
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        //throw new Error($"Léxico",log,linea);
                     }
                 }
             }
@@ -345,7 +345,7 @@ namespace Lexico
                         break;
 
                     case '\'': //Caracter
-                        setClasificacion(Tipos.Caracter);
+                        setClasificacion(Tipos.Cadena);
                         if ((c = (char)archivo.Peek()) == '\'')
                         {
                             throw new Error("Cadena vacía", log, linea);

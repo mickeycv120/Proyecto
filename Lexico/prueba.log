@@ -9,5 +9,5 @@
 9  "hola mundo" = Cadena
 10  # = Caracter
 11  #64 = Caracter
-12  '@' = Caracter
+12  '@' = Cadena
 El archivo tiene 12 líneas
