@@ -318,29 +318,33 @@ namespace Lexico
                         setClasificacion(Tipos.Cadena);
                         if ((c = (char)archivo.Peek()) == '"')
                         {
-                            throw new Error("Cadena vacía", log, linea);
+                            throw new Error("Error léxico", log, linea);
                         }
-                        while (true)
+
+                        if (char.IsWhiteSpace(c = (char)archivo.Peek()))
                         {
-                            if (finArchivo())
+                            while (char.IsWhiteSpace(c = (char)archivo.Read()))
                             {
-                                throw new Error("Cadena no cerrada antes del fin del archivo", log, linea);
                             }
+                        }
 
-                            c = (char)archivo.Read();
-
+                        while (!finArchivo())
+                        {
+                            c = (char)archivo.Peek();
                             if (c == '\n')
                             {
-                                throw new Error("Cadena no cerrada antes del final de línea", log, linea);
+                                throw new Error("Error léxico: salto de línea sin comilla de cierre", log, linea);
                             }
-                            else if (c == '"')
+                            if (c == '"')
                             {
                                 buffer += c;
+                                archivo.Read();
                                 break;
                             }
-
                             buffer += c;
+                            archivo.Read();
                         }
+
                         break;
 
                     case '\'': //Caracter
@@ -351,7 +355,7 @@ namespace Lexico
                         }
                         else if (char.IsWhiteSpace(c = (char)archivo.Peek()))
                         {
-                            throw new Error("Error lexico2", log, linea);
+                            throw new Error("Error lexico", log, linea);
                         }
                         else
                         {
@@ -365,7 +369,7 @@ namespace Lexico
                         }
                         else
                         {
-                            throw new Error("Error lexico3", log, linea);
+                            throw new Error("Error lexico", log, linea);
                         }
 
 
