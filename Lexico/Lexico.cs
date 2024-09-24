@@ -333,8 +333,7 @@ namespace Lexico
                             {
                                 throw new Error("Cadena no cerrada antes del final de línea", log, linea);
                             }
-
-                            if (c == '"')
+                            else if (c == '"')
                             {
                                 buffer += c;
                                 break;
@@ -348,32 +347,29 @@ namespace Lexico
                         setClasificacion(Tipos.Caracter);
                         if ((c = (char)archivo.Peek()) == '\'')
                         {
-                            throw new Error("Cadena vacía", log, linea);
+                            throw new Error("Carácter vacío", log, linea);
                         }
-                        while (true)
+                        else if (char.IsWhiteSpace(c = (char)archivo.Peek()))
                         {
-                            if (finArchivo())
-                            {
-                                throw new Error("Cadena no cerrada antes del fin del archivo", log, linea);
-                            }
-
-                            c = (char)archivo.Read();
-
-                            if (c == '\n')
-                            {
-                                throw new Error("Cadena no cerrada antes del final de línea", log, linea);
-                            }
-                            else if (c == '\'')
-                            {
-                                buffer += c;
-                                break;
-                            }
-                            else if (char.IsLetter(c = (char)archivo.Peek()))
-                            {
-                                throw new Error("Léxico, se esperaba un solo carácter", log, linea);
-                            }
-
+                            throw new Error("Error lexico2", log, linea);
                         }
+                        else
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        if ((c = (char)archivo.Peek()) == '\'')
+                        {
+                            buffer += c;
+                            archivo.Read();
+                        }
+                        else
+                        {
+                            throw new Error("Error lexico3", log, linea);
+                        }
+
+
+
                         break;
                     case '#':
                         setClasificacion(Tipos.Caracter);

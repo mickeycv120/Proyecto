@@ -6,8 +6,8 @@
 6  230.30e30 = Numero
 7  230.30e-30 = Numero
 8  230.30e+30 = Numero
-9  "hola mundo" = Cadena
+9  " " = Cadena
 10  # = Caracter
 11  #64 = Caracter
-Error: Léxico, se esperaba un solo carácter en la línea 12
+12  'a' = Caracter
 El archivo tiene 12 líneas
