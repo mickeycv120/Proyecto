@@ -321,13 +321,6 @@ namespace Lexico
                             throw new Error("Error léxico", log, linea);
                         }
 
-                        if (char.IsWhiteSpace(c = (char)archivo.Peek()))
-                        {
-                            while (char.IsWhiteSpace(c = (char)archivo.Read()))
-                            {
-                            }
-                        }
-
                         while (!finArchivo())
                         {
                             c = (char)archivo.Peek();

@@ -6,5 +6,8 @@
 6  230.30e30 = Numero
 7  230.30e-30 = Numero
 8  230.30e+30 = Numero
-Error: Error léxico: salto de línea sin comilla de cierre en la línea 9
-El archivo tiene 9 líneas
+9  "Hola mundo" = Cadena
+10  # = Caracter
+11  #64 = Caracter
+12  '@' = Caracter
+El archivo tiene 12 líneas
