@@ -128,3 +128,83 @@ namespace Lexico2
         }
     }
 }
+/*
+    Expresion Regular: Metodo Formal que a traves de una secuencia de caracteres que define un PATRON de busqueda
+
+    a)Reglas BNF
+    b)Reglas BNF extendidas
+    c)Operaciones aplicadas al lenguaje!!!!!
+    
+    OAL
+
+    1. Concatenacion Simple(·)
+    2. Concatenacion Exponencial (Exponente)
+    3. Cerradura de Kleene (*)
+    4. Ceraddura Positiva (+)
+    5. Cerradura Epsilon (?)
+    6. Operador OR (|)
+    7. Parentesis ()
+
+    L = {A, B, C, D, E,...Z a, b, c, d, e, ....z}
+    D = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+
+    1. L·D
+       LD
+       >=
+
+    2. L^3 = LLL
+       L^3D^2 = LLLDD
+       D^5 = DDDDD
+       =2 = ==
+
+    3. L* = Cero o mas letras
+       D* = Cero o mas digitos
+
+    4. L+ = Una o mas letras   
+       D+ = Uno o mas digitos
+       
+    5. L? = Cero o una letra (La letra es optativa-opcional)
+
+    6. L | D = Letra o digito
+       + | - = + o menos
+
+    7. (L D) L? = (Letra seguido de un digito y al final una Letra opcional)
+
+    Produccion Gramatical
+
+    Clasificacion del Token -> Expresion Regular 
+
+    Identificador -> L (L | D )*
+
+    Numero -> D+ (.D+)? (E(+|-)? D+ )?
+
+    FinSentencia-> ;
+    InicioBloque-> {
+    FinBloque-> }
+
+    Caracter-> 
+    OperadorTernario-> ?
+    Puntero-> ->
+    Termino+ -> + | =
+    Termino- -> - | =
+    Termino-P -> 
+    OperadorFactor->  * | / | % (=)?
+    IncrementoFactor-> *= | /= | %=
+    IncrementoTermino-> + (+ | =) | - (-|=)
+    OperadorMoneda->
+    OperadorLogico-> && | || | !
+    NotOpRel -> ! (=)?
+    Asignacion-> =
+    AsOpRel -> = (=)?
+    OperadorRelacional-> >(=)? | <(> | = )? | =(= | !)
+    Cadena-> "c*"
+    Caracter -> 'c' | #D* | lambda
+    
+    Automata: Modelo Matematico que representa una expresion regular a traves de un GRAFO, para una maquina de estado finito
+    que consiste en un conjunto de estados bien definidos, 
+    - un estado inicial
+    - un alfabeto de entrada
+    - una funcion de transicion.
+
+*/
