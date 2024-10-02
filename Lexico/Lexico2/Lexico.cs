@@ -41,6 +41,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Lexico2
 {
@@ -52,6 +53,8 @@ namespace Lexico2
         StreamWriter asm; //* asm - el archivo donde vamos a escribir el código ensamblador
         StreamWriter error; //* error - el archivo donde vamos a escribir los errores
         int linea;
+        const int F = -1;
+        const int E = -2;
         //!@params
 
         public Lexico()
@@ -115,11 +118,26 @@ namespace Lexico2
 
         public void nextToken()
         {
-            char c; // * - es el archivo pero carácter por carácter
+            char transicion; // * - es el archivo pero carácter por carácter
             string buffer = "";
+            int estado = 0;
+
+            while (estado >= 0)
+            {
+                transicion = (char)archivo.Peek();
+                estado = automata(transicion, estado);
+            }
+
+
             setContenido(buffer);
             log.WriteLine($"{linea}  {getContenido()} = {getClasificacion()}");
             //linea++;
+        }
+
+        //Método autómata
+        public int automata(int transicion, int estado)
+        {
+            return 0;
         }
 
         public bool finArchivo()
@@ -128,6 +146,7 @@ namespace Lexico2
         }
     }
 }
+
 /*
     Expresion Regular: Metodo Formal que a traves de una secuencia de caracteres que define un PATRON de busqueda
 
