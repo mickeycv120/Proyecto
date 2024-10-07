@@ -116,6 +116,126 @@ namespace Lexico2
             error.Close();
         }
 
+        //Método autómata
+        private int automata(char c, int estado)
+        {
+            int nuevoEstado = estado;
+            switch (estado)
+            {
+                case 0:
+                    if (char.IsWhiteSpace(c))
+                    {
+                        nuevoEstado = 0;
+                    }
+                    else if (char.IsLetter(c))
+                    {
+                        nuevoEstado = 1;
+                    }
+                    else if (char.IsDigit(c))
+                    {
+                        nuevoEstado = 2;
+                    }
+                    else
+                    {
+                        nuevoEstado = 8;
+                    }
+                    break;
+                case 1:
+                    setClasificacion(Tipos.Identificador);
+                    if (char.IsLetterOrDigit(c))
+                    {
+                        nuevoEstado = 1;
+                    }
+                    else
+                    {
+                        nuevoEstado = F;
+                    }
+                    break;
+                case 2:
+                    setClasificacion(Tipos.Numero);
+                    if (char.IsDigit(c))
+                    {
+                        nuevoEstado = 2;
+                    }
+                    else if (c == '.')
+                    {
+                        nuevoEstado = 3;
+                    }
+                    else if (char.ToLower(c) == 'e')
+                    {
+                        nuevoEstado = 5;
+                    }
+                    else
+                    {
+                        nuevoEstado = F;
+                    }
+                    break;
+                case 3:
+                    if (char.IsDigit(c))
+                    {
+                        nuevoEstado = 4;
+                    }
+                    else
+                    {
+                        nuevoEstado = E;
+                    }
+                    break;
+                case 4:
+                    if (char.IsDigit(c))
+                    {
+                        nuevoEstado = 4;
+                    }
+                    else if (char.ToLower(c) == 'e')
+                    {
+                        nuevoEstado = 5;
+                    }
+                    else
+                    {
+                        nuevoEstado = F;
+                    }
+                    break;
+                case 5:
+                    if (c == '+' || c == '-')
+                    {
+                        nuevoEstado = 6;
+                    }
+                    else if (char.IsDigit(c))
+                    {
+                        nuevoEstado = 7;
+                    }
+                    else
+                    {
+                        nuevoEstado = E;
+                    }
+                    break;
+                case 6:
+                    if (char.IsDigit(c))
+                    {
+                        nuevoEstado = 7;
+                    }
+                    else
+                    {
+                        nuevoEstado = E;
+                    }
+                    break;
+                case 7:
+                    if (char.IsDigit(c))
+                    {
+                        nuevoEstado = 7;
+                    }
+                    else
+                    {
+                        nuevoEstado = F;
+                    }
+                    break;
+                case 8:
+                    setClasificacion(Tipos.Caracter);
+                    nuevoEstado = F;
+                    break;
+            }
+            return nuevoEstado;
+        }
+
         public void nextToken()
         {
             char transicion; // * - es el archivo pero carácter por carácter
@@ -126,18 +246,37 @@ namespace Lexico2
             {
                 transicion = (char)archivo.Peek();
                 estado = automata(transicion, estado);
+
+                if (estado == E)
+                {
+                    if (getClasificacion() == Tipos.Numero)
+                    {
+                        throw new Error("léxico, se espera un dígito", log, linea);
+                    }
+                }
+
+                if (estado >= 0)
+                {
+                    archivo.Read();
+                    if (transicion == '\n')
+                    {
+                        linea++;
+                    }
+
+                    if (estado > 0)
+                    {
+                        buffer += transicion;
+                    }
+                }
             }
 
 
-            setContenido(buffer);
-            log.WriteLine($"{linea}  {getContenido()} = {getClasificacion()}");
+            if (!finArchivo())
+            {
+                setContenido(buffer);
+                log.WriteLine($"{linea}  {getContenido()} = {getClasificacion()}");
+            }
             //linea++;
-        }
-
-        //Método autómata
-        public int automata(int transicion, int estado)
-        {
-            return 0;
         }
 
         public bool finArchivo()

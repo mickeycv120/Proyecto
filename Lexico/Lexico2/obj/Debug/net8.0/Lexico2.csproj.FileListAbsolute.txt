@@ -1,0 +1,15 @@
+D:\C#\Proyecto\Lexico\Lexico2\bin\Debug\net8.0\Lexico2.exe
+D:\C#\Proyecto\Lexico\Lexico2\bin\Debug\net8.0\Lexico2.deps.json
+D:\C#\Proyecto\Lexico\Lexico2\bin\Debug\net8.0\Lexico2.runtimeconfig.json
+D:\C#\Proyecto\Lexico\Lexico2\bin\Debug\net8.0\Lexico2.dll
+D:\C#\Proyecto\Lexico\Lexico2\bin\Debug\net8.0\Lexico2.pdb
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.AssemblyInfoInputs.cache
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.AssemblyInfo.cs
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.csproj.CoreCompileInputs.cache
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.sourcelink.json
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.dll
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\refint\Lexico2.dll
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.pdb
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\Lexico2.genruntimeconfig.cache
+D:\C#\Proyecto\Lexico\Lexico2\obj\Debug\net8.0\ref\Lexico2.dll
