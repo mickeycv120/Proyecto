@@ -11,7 +11,7 @@ namespace Lexico2
         {
             Identificador, Numero, Caracter, FinSentencia, InicioBloque, FinBloque,
             OperadorTernario, OperadorTermino, OperadorFactor, IncrementoTermino, IncrementoFactor, Puntero, Asignacion,
-            OperadorLogico, OperadorRelacional, Moneda, Cadena
+            OperadorLogico, OperadorRelacional, Cadena
         }
         private string contenido;
         public Tipos clasificacion;
