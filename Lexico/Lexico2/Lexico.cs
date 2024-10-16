@@ -135,9 +135,17 @@ namespace Lexico2
                     {
                         nuevoEstado = 2;
                     }
+                    else if (c == '{')
+                    {
+                        nuevoEstado = 9;
+                    }
+                    else if (c == '}')
+                    {
+                        nuevoEstado = 10;
+                    }
                     else
                     {
-                        nuevoEstado = 8;
+                        nuevoEstado = 33;
                     }
                     break;
                 case 1:
@@ -232,6 +240,15 @@ namespace Lexico2
                     setClasificacion(Tipos.Caracter);
                     nuevoEstado = F;
                     break;
+                case 9:
+                    setClasificacion(Tipos.InicioBloque);
+                    nuevoEstado = F;
+                    break;
+                case 10:
+                    setClasificacion(Tipos.FinBloque);
+                    nuevoEstado = F;
+                    break;
+
             }
             return nuevoEstado;
         }

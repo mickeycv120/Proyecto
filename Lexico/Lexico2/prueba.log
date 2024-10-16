@@ -1,4 +1,4 @@
-4  350 = Numero
+4  AA350 = Identificador
 5  350.35 = Numero
 6  350.35e35 = Numero
 7  350.35e+35 = Numero
@@ -9,4 +9,4 @@
 12  ; = Caracter
 13  - = Caracter
 13  > = Caracter
-El archivo tiene 15 líneas
+El archivo tiene 14 líneas
