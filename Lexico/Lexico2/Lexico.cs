@@ -143,6 +143,18 @@ namespace Lexico2
                     {
                         nuevoEstado = 10;
                     }
+                    else if (c == '?')
+                    {
+                        nuevoEstado = 11;
+                    }
+                    else if (c == '+')
+                    {
+                        nuevoEstado = 12;
+                    }
+                    else if (c == '-')
+                    {
+                        nuevoEstado = 14;
+                    }
                     else
                     {
                         nuevoEstado = 33;
@@ -150,14 +162,7 @@ namespace Lexico2
                     break;
                 case 1:
                     setClasificacion(Tipos.Identificador);
-                    if (char.IsLetterOrDigit(c))
-                    {
-                        nuevoEstado = 1;
-                    }
-                    else
-                    {
-                        nuevoEstado = F;
-                    }
+                    nuevoEstado = char.IsLetterOrDigit(c) ? 1 : F;
                     break;
                 case 2:
                     setClasificacion(Tipos.Numero);
@@ -179,14 +184,7 @@ namespace Lexico2
                     }
                     break;
                 case 3:
-                    if (char.IsDigit(c))
-                    {
-                        nuevoEstado = 4;
-                    }
-                    else
-                    {
-                        nuevoEstado = E;
-                    }
+                    nuevoEstado = char.IsDigit(c) ? 4 : E;
                     break;
                 case 4:
                     if (char.IsDigit(c))
@@ -217,24 +215,10 @@ namespace Lexico2
                     }
                     break;
                 case 6:
-                    if (char.IsDigit(c))
-                    {
-                        nuevoEstado = 7;
-                    }
-                    else
-                    {
-                        nuevoEstado = E;
-                    }
+                    nuevoEstado = char.IsDigit(c) ? 7 : E;
                     break;
                 case 7:
-                    if (char.IsDigit(c))
-                    {
-                        nuevoEstado = 7;
-                    }
-                    else
-                    {
-                        nuevoEstado = F;
-                    }
+                    nuevoEstado = char.IsDigit(c) ? 7 : F;
                     break;
                 case 8:
                     setClasificacion(Tipos.Caracter);
@@ -247,6 +231,22 @@ namespace Lexico2
                 case 10:
                     setClasificacion(Tipos.FinBloque);
                     nuevoEstado = F;
+                    break;
+                case 11:
+                    setClasificacion(Tipos.OperadorTernario);
+                    nuevoEstado = F;
+                    break;
+                case 12:
+                    setClasificacion(Tipos.OperadorTermino);
+                    nuevoEstado = (c == '+' || c == '-') ? 13 : F;
+                    break;
+                case 13:
+                    setClasificacion(Tipos.IncrementoTermino);
+                    nuevoEstado = F;
+                    break;
+                case 14:
+                    setClasificacion(Tipos.OperadorTermino);
+
                     break;
 
             }
