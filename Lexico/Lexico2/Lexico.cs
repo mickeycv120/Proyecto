@@ -183,6 +183,10 @@ namespace Lexico2
                     {
                         nuevoEstado = 26;
                     }
+                    else if (c == '"')
+                    {
+                        nuevoEstado = 27;
+                    }
                     else
                     {
                         nuevoEstado = 33;
@@ -314,6 +318,25 @@ namespace Lexico2
                 case 22:
                     setClasificacion(Tipos.OperadorRelacional);
                     nuevoEstado = F;
+                    break;
+                case 23:
+                    setClasificacion(Tipos.Asignacion);
+                    nuevoEstado = (c == '=') ? 24 : F;
+                    break;
+                case 24:
+                    setClasificacion(Tipos.OperadorRelacional);
+                    nuevoEstado = F;
+                    break;
+                case 25:
+                    setClasificacion(Tipos.OperadorRelacional);
+                    nuevoEstado = (c == '=') ? 24 : F;
+                    break;
+                case 26:
+                    setClasificacion(Tipos.OperadorRelacional);
+                    nuevoEstado = (c == '>' || c == '=') ? 24 : F;
+                    break;
+                case 27:
+
                     break;
             }
             return nuevoEstado;
