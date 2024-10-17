@@ -159,6 +159,30 @@ namespace Lexico2
                     {
                         nuevoEstado = 16;
                     }
+                    else if (c == '&')
+                    {
+                        nuevoEstado = 18;
+                    }
+                    else if (c == '/')
+                    {
+                        nuevoEstado = 20;
+                    }
+                    else if (c == '!')
+                    {
+                        nuevoEstado = 21;
+                    }
+                    else if (c == '=')
+                    {
+                        nuevoEstado = 23;
+                    }
+                    else if (c == '>')
+                    {
+                        nuevoEstado = 25;
+                    }
+                    else if (c == '<')
+                    {
+                        nuevoEstado = 26;
+                    }
                     else
                     {
                         nuevoEstado = 33;
@@ -269,6 +293,26 @@ namespace Lexico2
                     break;
                 case 17:
                     setClasificacion(Tipos.IncrementoFactor);
+                    nuevoEstado = F;
+                    break;
+                case 18:
+                    setClasificacion(Tipos.Caracter);
+                    nuevoEstado = (c == '&') ? 19 : F;
+                    break;
+                case 19:
+                    setClasificacion(Tipos.OperadorLogico);
+                    nuevoEstado = F;
+                    break;
+                case 20:
+                    setClasificacion(Tipos.Caracter);
+                    nuevoEstado = (c == '|') ? 19 : F;
+                    break;
+                case 21:
+                    setClasificacion(Tipos.OperadorLogico);
+                    nuevoEstado = (c == '=') ? 22 : F;
+                    break;
+                case 22:
+                    setClasificacion(Tipos.OperadorRelacional);
                     nuevoEstado = F;
                     break;
             }
