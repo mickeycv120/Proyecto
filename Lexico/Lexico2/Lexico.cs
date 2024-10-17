@@ -187,6 +187,10 @@ namespace Lexico2
                     {
                         nuevoEstado = 27;
                     }
+                    else if (c == '\'')
+                    {
+                        nuevoEstado = 29;
+                    }
                     else
                     {
                         nuevoEstado = 33;
@@ -336,8 +340,21 @@ namespace Lexico2
                     nuevoEstado = (c == '>' || c == '=') ? 24 : F;
                     break;
                 case 27:
-
+                    setClasificacion(Tipos.Caracter);
+                    if (c == '\'')
+                    {
+                        nuevoEstado = 28;
+                    }
+                    else if (finArchivo())
+                    {
+                        nuevoEstado = E;
+                    }
+                    else
+                    {
+                        nuevoEstado = 27;
+                    }
                     break;
+
             }
             return nuevoEstado;
         }
