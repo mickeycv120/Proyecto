@@ -155,6 +155,10 @@ namespace Lexico2
                     {
                         nuevoEstado = 14;
                     }
+                    else if (c == '*' || c == '|' || c == '%')
+                    {
+                        nuevoEstado = 16;
+                    }
                     else
                     {
                         nuevoEstado = 33;
@@ -246,9 +250,27 @@ namespace Lexico2
                     break;
                 case 14:
                     setClasificacion(Tipos.OperadorTermino);
-
+                    if (c == '-' || c == '=')
+                    {
+                        nuevoEstado = 13;
+                    }
+                    else if (c == '>')
+                    {
+                        nuevoEstado = 15;
+                    }
                     break;
-
+                case 15:
+                    setClasificacion(Tipos.Puntero);
+                    nuevoEstado = F;
+                    break;
+                case 16:
+                    setClasificacion(Tipos.OperadorFactor);
+                    nuevoEstado = (c == '=') ? 17 : F;
+                    break;
+                case 17:
+                    setClasificacion(Tipos.IncrementoFactor);
+                    nuevoEstado = F;
+                    break;
             }
             return nuevoEstado;
         }
