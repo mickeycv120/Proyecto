@@ -163,7 +163,7 @@ namespace Lexico2
                     {
                         nuevoEstado = 18;
                     }
-                    else if (c == '/')
+                    else if (c == '|')
                     {
                         nuevoEstado = 20;
                     }
