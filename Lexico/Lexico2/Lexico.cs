@@ -397,6 +397,26 @@ namespace Lexico2
                         nuevoEstado = 0;
                     }
                     break;
+                case 35:
+                    nuevoEstado = (c == '\n') ? 0 : 35;
+                    break;
+                case 36:
+                    nuevoEstado = (c == '*') ? 37 : 36;
+                    break;
+                case 37:
+                    if (c == '*')
+                    {
+                        nuevoEstado = 37;
+                    }
+                    else if (c == '/')
+                    {
+                        nuevoEstado = 0;
+                    }
+                    else
+                    {
+                        nuevoEstado = 36;
+                    }
+                    break;
             }
             return nuevoEstado;
         }
