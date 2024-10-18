@@ -39,5 +39,6 @@ stdio = Identificador
 /= = IncrementoFactor
 % = OperadorFactor
 %= = IncrementoFactor
+"" = Caracter
 Error: lexico, argumento inesperado en la línea 16
 El archivo tiene 16 líneas

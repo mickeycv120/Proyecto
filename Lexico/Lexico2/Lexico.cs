@@ -448,7 +448,7 @@ namespace Lexico2
                     }
                     else if (getClasificacion() == Tipos.Caracter)
                     {
-                        throw new Error("lexico, argumento inesperado", log, linea);
+                        throw new Error("lexico, error en la cadena", log, linea);
                     }
                 }
 
