@@ -367,7 +367,13 @@ namespace Lexico2
                 case 31:
                     nuevoEstado = F;
                     break;
-
+                case 32:
+                    setClasificacion(Tipos.Caracter);
+                    nuevoEstado = (char.IsDigit(c)) ? 32 : F;
+                    break;
+                case 33:
+                    nuevoEstado = F;
+                    break;
             }
             return nuevoEstado;
         }
