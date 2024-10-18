@@ -12,12 +12,11 @@ stdio = Identificador
 230.30e+30 = Numero
 "hola mundo" = Caracter
 #64 = Caracter
--'@'
-    /*
-        Hola mundo
-        ITQ
-    */
-    radio;<<> = Puntero
+* = OperadorFactor
+/radio = Identificador
+; = Identificador
+< = OperadorRelacional
+<> = OperadorRelacional
 > = OperadorRelacional
 ! = OperadorLogico
 != = OperadorRelacional
@@ -41,4 +40,4 @@ stdio = Identificador
 % = OperadorFactor
 %= = IncrementoFactor
 "" = Caracter
-El archivo tiene 18 líneas
+El archivo tiene 15 líneas
