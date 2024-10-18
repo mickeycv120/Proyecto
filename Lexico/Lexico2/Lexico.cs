@@ -442,6 +442,14 @@ namespace Lexico2
                     {
                         throw new Error("léxico, se espera un dígito", log, linea);
                     }
+                    else if (getClasificacion() == Tipos.Cadena)
+                    {
+                        throw new Error("lexico, cadena no cerrada", log, linea);
+                    }
+                    else if (getClasificacion() == Tipos.Caracter)
+                    {
+                        throw new Error("lexico, argumento inesperado", log, linea);
+                    }
                 }
 
                 if (estado >= 0)
