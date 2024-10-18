@@ -191,6 +191,10 @@ namespace Lexico2
                     {
                         nuevoEstado = 29;
                     }
+                    else if (c == '/')
+                    {
+                        nuevoEstado = 34;
+                    }
                     else
                     {
                         nuevoEstado = 33;
@@ -373,6 +377,25 @@ namespace Lexico2
                     break;
                 case 33:
                     nuevoEstado = F;
+                    break;
+                case 34:
+                    setClasificacion(Tipos.OperadorFactor);
+                    if (c == '=')
+                    {
+                        nuevoEstado = 17;
+                    }
+                    else if (c == '/')
+                    {
+                        nuevoEstado = 35;
+                    }
+                    else if (c == '*')
+                    {
+                        nuevoEstado = 36;
+                    }
+                    else
+                    {
+                        nuevoEstado = 0;
+                    }
                     break;
             }
             return nuevoEstado;
