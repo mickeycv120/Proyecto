@@ -40,4 +40,7 @@ stdio = Identificador
 % = OperadorFactor
 %= = IncrementoFactor
 "" = Caracter
-El archivo tiene 15 líneas
+' ' = Caracter
+; = Caracter
+} = FinBloque
+El archivo tiene 16 líneas
