@@ -452,6 +452,19 @@ namespace Lexico2
                         linea++;
                     }
 
+                    if (transicion == '/' && (char)archivo.Peek() == '/')
+                    {
+                        while (transicion != '\n' && !finArchivo())
+                        {
+                            archivo.Read();
+                            transicion = (char)archivo.Peek();
+                        }
+
+                        estado = 0;
+                        buffer = "";
+
+                    }
+
                     if (estado > 0)
                     {
                         buffer += transicion;

@@ -1,16 +1,9 @@
-# = Caracter
-include = Identificador
-< = OperadorRelacional
-stdio = Identificador
-> = OperadorRelacional
-{ = InicioBloque
-230 = Numero
-// Numero entero230e-30 = Numero
+230e-30 = Numero
 230e+30 = Numero
 230.30e30 = Numero
 230.30e-30 = Numero
 230.30e+30 = Numero
-// Numero en formato cientifico"hola mundo" = Caracter
+"hola mundo" = Caracter
 #64 = Caracter
 -'@'
     /*
@@ -41,4 +34,4 @@ stdio = Identificador
 % = OperadorFactor
 %= = IncrementoFactor
 "" = Caracter
-El archivo tiene 18 líneas
+El archivo tiene 16 líneas

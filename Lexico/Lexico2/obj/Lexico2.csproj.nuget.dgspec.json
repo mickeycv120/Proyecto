@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj": {}
+    "D:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj": {}
   },
   "projects": {
-    "d:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj": {
+    "D:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj",
+        "projectUniqueName": "D:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj",
         "projectName": "Lexico2",
-        "projectPath": "d:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj",
+        "projectPath": "D:\\C#\\Proyecto\\Lexico\\Lexico2\\Lexico2.csproj",
         "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-        "outputPath": "d:\\C#\\Proyecto\\Lexico\\Lexico2\\obj\\",
+        "outputPath": "D:\\C#\\Proyecto\\Lexico\\Lexico2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
