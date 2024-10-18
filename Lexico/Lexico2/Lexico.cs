@@ -195,6 +195,10 @@ namespace Lexico2
                     {
                         nuevoEstado = 34;
                     }
+                    else if (c == '#')
+                    {
+                        nuevoEstado = 32;
+                    }
                     else
                     {
                         nuevoEstado = 33;
@@ -373,7 +377,7 @@ namespace Lexico2
                     break;
                 case 32:
                     setClasificacion(Tipos.Caracter);
-                    nuevoEstado = (char.IsDigit(c)) ? 32 : F;
+                    nuevoEstado = char.IsDigit(c) ? 32 : F;
                     break;
                 case 33:
                     nuevoEstado = F;
@@ -459,7 +463,8 @@ namespace Lexico2
             if (!finArchivo())
             {
                 setContenido(buffer);
-                log.WriteLine($"{linea}  {getContenido()} = {getClasificacion()}");
+                //log.WriteLine($"{linea}  {getContenido()} = {getClasificacion()}");
+                log.WriteLine($"{getContenido()} = {getClasificacion()}");
             }
             //linea++;
         }
