@@ -341,7 +341,7 @@ namespace Lexico2
                     break;
                 case 27:
                     setClasificacion(Tipos.Caracter);
-                    if (c == '\'')
+                    if (c == '"')
                     {
                         nuevoEstado = 28;
                     }
@@ -353,6 +353,19 @@ namespace Lexico2
                     {
                         nuevoEstado = 27;
                     }
+                    break;
+                case 28:
+                    nuevoEstado = F;
+                    break;
+                case 29:
+                    setClasificacion(Tipos.Caracter);
+                    nuevoEstado = 30;
+                    break;
+                case 30:
+                    nuevoEstado = (c == '\'') ? 31 : E;
+                    break;
+                case 31:
+                    nuevoEstado = F;
                     break;
 
             }
